@@ -1,2 +1,0 @@
-# luciamateo.github.io
-bioagrafia
