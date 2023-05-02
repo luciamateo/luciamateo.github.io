@@ -1,33 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Código QR con Javascript</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
-	<link rel="stylesheet" href="estilos.css" />
-	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-	<script defer src="app.js"></script>
-</head>
+    td,
+    th,
+    input {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
 
 <body>
-	<div class="contenedor">
-		<form action="" id="formulario" class="formulario">
-			Nombre:<br><input type="text" id="nombre"><br><br>
-			Apellido:<br><input type="text" id="apellido"><br><br>
-			Alias:<br><input type="text" id="alias"><br><br>
-			Numero Celular:<br><input type="text" id="celular"><br><br>
-			Correo:<br><input type="text" id="correo"><br><br>
-			Dirrecion:<br><input type="text" id="dirrecion"><br><br>
-			<button class="btn">Generar QR</button>
-		</form>
 
-		<div id="contenedorQR" class="contenedorQR"></div>
-	</div>
+    <h2>Formulario de ventas por mes</h2>
+    <form id="formulario">
+        <label>Ventas por meses:</label><br>
+        <table>
+            <td>
+
+                <label>Enero:</label><br>
+                <input type="number" id="ventas1" name="ventas"><br><br>
+                <label>Febrero:</label><br>
+                <input type="number" id="ventas2" name="ventas"><br><br>
+                <label>Marzo:</label><br>
+                <input type="number" id="ventas3" name="ventas"><br><br>
+                <label>Abril:</label><br>
+                <input type="number" id="ventas4" name="ventas"><br><br>
+                <label>Mayo:</label><br>
+                <input type="number" id="ventas5" name="ventas"><br><br>
+                <label>Junio:</label><br>
+                <input type="number" id="ventas6" name="ventas">
+            </td>
+            <td>
+                <label>Julio:</label><br>
+                <input type="number" id="ventas7" name="ventas"><br><br>
+                <label>Agosto:</label><br>
+                <input type="number" id="ventas8" name="ventas"><br><br>
+                <label>Septiembre:</label><br>
+                <input type="number" id="ventas9" name="ventas"><br><br>
+                <label>Obtubre:</label><br>
+                <input type="number" id="ventas10" name="ventas"><br><br>
+                <label>Noviembre:</label><br>
+                <input type="number" id="ventas11" name="ventas"><br><br>
+                <label>Diciembre:</label><br>
+                <input type="number" id="ventas12" name="ventas">
+            </td>
+        </table>
+        <button type="button" onclick="mostrarDatos()">Enviar</button>
+        </table>
+    </form>
+
+    <canvas id="MiGrafica" width="400" height="300"></canvas>
+    <script>
+
+        function mostrarDatos() {
+            var ventas1 = document.forms["formulario"]["ventas1"].value;
+            var ventas2 = document.forms["formulario"]["ventas2"].value;
+            var ventas3 = document.forms["formulario"]["ventas3"].value;
+            var ventas4 = document.forms["formulario"]["ventas4"].value;
+            var ventas5 = document.forms["formulario"]["ventas5"].value;
+            var ventas6 = document.forms["formulario"]["ventas6"].value;
+            var ventas7 = document.forms["formulario"]["ventas7"].value;
+            var ventas8 = document.forms["formulario"]["ventas8"].value;
+            var ventas9 = document.forms["formulario"]["ventas9"].value;
+            var ventas10 = document.forms["formulario"]["ventas10"].value;
+            var ventas11 = document.forms["formulario"]["ventas11"].value;
+            var ventas12 = document.forms["formulario"]["ventas12"].value;
+
+            let miCanvas = document.getElementById("MiGrafica").getContext("2d");
+
+            var chart = new Chart(miCanvas, {
+                type: "bar",
+                data: {
+                    labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Obtubre", "Noviembre", "Diciembre"],
+                    datasets: [{
+                        label: "Mi grafica de ventas por mes",
+                        BackgroundColor: "rgb(0,0,0)",
+                        borderColor: "rgb(10,25,0)",
+                        data: [ventas1, ventas2, ventas3, ventas4, ventas5, ventas6, ventas7, ventas8, ventas9, ventas10, ventas11, ventas12]
+                    }]
+                }
+            })
+        }
+
+    </script>
+
+</body>
+
+</html>
+
 </body>
 
 </html>
