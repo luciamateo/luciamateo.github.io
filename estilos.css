@@ -1,50 +1,303 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	background: #f2f2f2;
+
+    /*aqui se pone el css para la pc*/
+
+html {
+    font-family: "helvetica neue", sans-serif;
+    background-color: white
+
+}
+.barner{
+text-align: center;
+
 }
 
-body {
-	font-family: 'Open Sans', sans-serif;
+.nav {
+    border-bottom: 1px solid #EAEAEB;
+    text-align: left;
+    height: 70px;
+    line-height: 70px;
+    background-color: rgb(238, 238, 238);
+    border: 1px solid #54D17A;
+
+
 }
 
-.contenedor {
-	max-width: 90%;
-	width: 400px;
-	margin: 80px auto;
+.menu {
+    margin: 0 30px 0 0;
+
 }
 
-.formulario input[type='text'] {
-	padding: 20px;
-	border: none;
-	background: #fff;
-	width: 100%;
-	border-radius: 5px;
-	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-	font-size: 20px;
-	margin-bottom: 20px;
-	font-family: 'Open Sans', sans-serif;
+.menu a {
+    clear: left;
+    text-decoration: none;
+    color:black;
+    margin: 0 10px;
+    line-height: 70px;
+    font-size: 25px;
+    font-family: "arial";
+    border: #295ba7 
+}
+    
+span {
+    color: #54D17A;
+}
+    
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: left;
 }
 
-.formulario .btn {
-	width: 100%;
-	border: none;
-	background: rgb(0, 0, 0);
-	color: #fff;
-	cursor: pointer;
-	padding: 20px;
-	font-size: 20px;
-	border-radius: 5px;
-	font-family: 'Open Sans', sans-serif;
+#toggle {
+    display: none;
 }
 
-.formulario .btn:hover {
-	background: #3e14b2;
+#footer{
+    width: 100%;
+    background-color: #295ba7;
+    padding-top: 0;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+}   
+
+article{ 
+    height: 1550px;
+    width:80%; 
+    float: left;
+    background-color: rgb(238, 238, 238);
 }
 
-.contenedorQR {
-	display: flex;
-	justify-content: center;
-	padding: 40px 0;
+aside{
+    height: 1550px;
+    width:20%; 
+    background-color: gray;
+    float: right;
+}
+
+h1 {
+    text-align: left;
+    font-family: "Bauhaus 93";
+    color: black;
+}
+
+#mapa img{
+    height: 250px;
+    width: 250px;
+    float: left;
+}
+h2 {
+    text-align: center;
+    font-family: "Bauhaus 93";
+    color: black;
+}
+
+.letras{
+    font-size: 25px;
+    font-family: "Bauhaus 93";
+    color:  brown;
+}
+
+.letrafooter{
+    font-size: 15px;
+    font-family: "arial";
+    color:white;
+    line-height: 1.2;
+}
+.productos{
+    background-color: white;
+    float: left;
+    margin: 5px;
+    width: 250px;
+    height: 350px;
+    border: 1px solid blueviolet;
+    padding-left:25px;
+    padding-right:50px;
+    border-radius:0px;
+}
+
+.productos img{
+    float: left;
+    margin: 9px;
+    width: 170px;
+    height: 170px;
+    padding-left:25px;
+    padding-right:50px;
+    border-radius:10px;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #5cb85c;
+
+}
+
+.carrito{
+    float: right;
+    height: 50px;
+    width: 50px;
+    color: black;
+    margin: 0;
+}
+
+#cantProduct{
+    float: right;
+    color: red;
+    font-size: 20px;
+    font-family: "arial black";
+}
+
+@media only screen and (max-width:750px){
+
+    /*aqui se pone el css para los moviles*/
+
+    body{
+        height: 100%;
+    }
+    #footer{
+        background-color: #295ba7;
+        padding-top: 0;
+        margin: auto;
+        text-align: center;
+        text-decoration: none;
+    }   
+    
+    .nav {
+        background-color: rgb(238, 238, 238);    
+    }
+
+    article{ 
+        height: 100%;
+        width:100%; 
+        float: left;
+        background-color: rgb(238, 238, 238);    
+    }
+    
+    aside{
+        height:0px;
+        width:0px; 
+        background-color: white;
+        float: right;
+    }
+    
+    p{
+        text-align: center;
+        font-family: "Bell tm";
+        font-size: 20px;
+    }
+    
+    
+    h1 {
+        text-align: left;
+        font-family: "Bauhaus 93";
+        color: black;
+    }
+    
+    h2 {
+        text-align: center;
+        font-family: "Bauhaus 93";
+        color: black;
+    }
+    
+    .letras{
+        font-size: 10px;
+        font-family: "arial black";
+        color:  brown;
+    }
+    
+    .letrafooter{
+        font-size: 10px;
+        font-family: "arial black";
+        color:white;
+        line-height: 1.2;
+        text-decoration: none;
+    }
+     
+    .fotos{
+        width:150px;
+        height:100px;
+    }
+
+    .fotoperfil{
+        width:200px;
+        height:200px;
+    }
+
+    label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .menu a {
+        display: block;
+        border-bottom: 1px solid #EAEAEB;
+        margin: 0;
+        background-color:#54D17A;
+        position: relative;
+        line-height: 70px;
+        color:white;
+        font-size: 25px;
+    }
+
+    #toggle:checked + .menu {
+        display: block;
+    }
+
+    .cart_anchor{ 
+        float:right; 
+        vertical-align:top; 
+        background: url('images/cart-icon.png') no-repeat center center / 100% auto;
+        width: 50px;
+        height: 50px; 
+        margin-bottom: 50px;
+    }
+
+    btn-success {
+        color: #fff;
+        background-color: #5cb85c;
+        border-color: #4cae4c;
+    }
+    .btn {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+    img {
+        vertical-align: middle;
+    }
+    
+    img {
+        border: 0;
+    }
 }
