@@ -1,96 +1,44 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="es">
 
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <style>
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333333;
-        }
-
-        li {
-            float: left;
-        }
-
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 16px;
-            text-decoration: none;
-        }
-
-        li a:hover {
-            background-color: #111111;
-        }
-    </style>
+    <title>Proyecto Final</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
 </head>
 
 <body>
-    <script>
-        $(function () {
-
-            var data = {
-                menu: [{
-                    name: 'Practica 1',
-                    link: 'practica1.html',
-                    sub: null
-                }, {
-                    name: 'Practica 2',
-                    link: 'practica2.html',
-                    sub: null
-                }, {
-                    name: 'Practica 3',
-                    link: 'practica3.html',
-                    sub: null
-                }, {
-                    name: 'Practica 4',
-                    link: 'practica4.html',
-                    sub: null
-                }, {
-                    name: 'Practica 5',
-                    link: 'practica5.html',
-                    sub: null
-                }, {
-                    name: 'Practica 6',
-                    link: 'indexlucia.html',
-                    sub: null
-                }]
-            };
-
-            var getMenuItem = function (itemData) {
-                var item = $("<li>")
-                    .append(
-                        $("<a>", {
-                            href: '' + itemData.link,
-                            html: itemData.name
-                        }));
-                if (itemData.sub) {
-                    var subList = $("<ul>");
-                    $.each(itemData.sub, function () {
-                        subList.append(getMenuItem(this));
-                    });
-                    item.append(subList);
-                }
-                return item;
-            };
-
-            var $menu = $("#menu");
-            $.each(data.menu, function () {
-                $menu.append(
-                    getMenuItem(this)
-                );
-            });
-            $menu.menu();
-        });
-    </script>
-
-    <ul id="menu"></ul>
-
+    <header>
+        <div class="nav">
+            <label for="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle" />
+            <div class="menu">
+                <a href="index.html" class="letras"><b>Inicio</a>
+                <a href="practica1.html" class="letras"><b>practica1</a>
+                <a href="practica2.html" class="letras"><b>practica2</a>
+                <a href="practica3.html" class="letras"><b>practica3</a>
+                <a href="practica4.html" class="letras"><b>practica4</a>
+                <a href="practica5.html" class="letras"><b>practica5</a>
+                <a href="indexlucia.html" class="letras"><b>practica6</a>
+                <a href="practica7.html" class="letras"><b>practica7</a>
+            </div>
+        </div>
+    </header>
+    <article>
+        <section>
+            <img src="Lucia.jpg">
+        </section>
+    </article>
+    <aside>
+    </aside>
+    <footer id="footer">
+        <p class="letrafooter">Lucia Mateo todos los derechos reservados
+            <br><b>Santo Domingo Norte Republica Dominicana. </b>
+            <br>Celular: (829) 273-8317
+        </p>
+    </footer>
 </body>
+<script></script>
 
 </html>
