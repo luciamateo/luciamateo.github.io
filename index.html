@@ -11,7 +11,29 @@
     font-family: "helvetica neue", sans-serif;
     background-color: white
 }
-        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111111;
+        } 
 .center {
   display: block;
   margin-left: auto;
@@ -234,15 +256,16 @@ li a:hover {
 <body>
     <header>
         <div class="nav">
-            <div class="menu">
-                <ul><a href="index.html" class="letras"><b>Inicio</a></ul>
-                <ul><a href="practica1.html" class="letras"><b>practica1</a></ul>
-                <ul><a href="practica2.html" class="letras"><b>practica2</a></ul>
-                <ul><a href="practica3.html" class="letras"><b>practica3</a></ul>
-                <ul><a href="practica4.html" class="letras"><b>practica4</a></ul>
-                <ul><a href="practica5.html" class="letras"><b>practica5</a></ul>
-                <ul><a href="indexlucia.html" class="letras"><b>practica6</a></ul>
-                <ul><a href="practica7.html" class="letras"><b>practica8</a></ul>
+            <div class="menu"><ul>
+                <li><a href="index.html" class="letras"><b>Inicio</a></ul>
+                <li><a href="practica1.html" class="letras"><b>practica1</a></li>
+                <li><a href="practica2.html" class="letras"><b>practica2</a></li>
+                <li><a href="practica3.html" class="letras"><b>practica3</a></li>
+                <li><a href="practica4.html" class="letras"><b>practica4</a></li>
+                <li><a href="practica5.html" class="letras"><b>practica5</a></li>
+                <li><a href="indexlucia.html" class="letras"><b>practica6</a></li>
+                <li><a href="practica7.html" class="letras"><b>practica8</a></li>
+                    </ul>
             </div>
         </div>
     </header>
